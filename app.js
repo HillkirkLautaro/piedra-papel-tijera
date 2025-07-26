@@ -36,3 +36,12 @@ document.querySelectorAll('.choice').forEach(button => {
     resultDiv.textContent = `${result} | Puntaje - Tú: ${humanScore} Computadora: ${computerScore}`;
   });
 });
+
+const computerChoiceDiv = document.getElementById('computer-choice');
+computerChoiceDiv.innerHTML = `<img src="img/${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}.png" width="100" />`;
+document.getElementById('reset').addEventListener('click', () => {
+  humanScore = 0;
+  computerScore = 0;
+  resultDiv.textContent = 'Puntaje reiniciado.';
+});
+

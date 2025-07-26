@@ -24,3 +24,10 @@ body {
       font-size: 1.2em;
       margin-top: 20px;
     }
+.title {
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 20px;
+      transition-delay: 0.3s;
+    }
