@@ -12,3 +12,9 @@ Este es un juego clásico de Piedra, Papel o Tijeras desarrollado como parte del
 ## 🖼️ Assets
 
 Los assets (imágenes de piedra, papel y tijeras) fueron creados manualmente en **Krita**
+
+## Próximas mejoras
+
+- Agregar imagen al empatar.
+
+- Crear el diseño del "body" a mano.

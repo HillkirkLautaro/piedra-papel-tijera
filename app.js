@@ -35,8 +35,14 @@ document.querySelectorAll('.choice').forEach(button => {
     const result = playRound(humanChoice, computerChoice);
 
     resultDiv.textContent = `${result} | Puntaje - Tú: ${humanScore} Computadora: ${computerScore}`;
-
-    // 👇 Esto va adentro del click
+    if (humanScore > computerScore) {
+      resultDiv.textContent += " ¡Tú ganas!";
+    } else if (computerScore > humanScore) {
+      resultDiv.textContent += " ¡La computadora gana!";
+    }
+    else {
+      resultDiv.textContent += " ¡Es un empate!";
+    }
     computerChoiceDiv.innerHTML = `<img src="img/${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}.png" width="100" />`;
   });
 });
