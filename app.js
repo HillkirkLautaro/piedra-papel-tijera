@@ -26,6 +26,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const resultDiv = document.getElementById('result');
+const computerChoiceDiv = document.getElementById('computer-choice');
 
 document.querySelectorAll('.choice').forEach(button => {
   button.addEventListener('click', () => {
@@ -34,14 +35,15 @@ document.querySelectorAll('.choice').forEach(button => {
     const result = playRound(humanChoice, computerChoice);
 
     resultDiv.textContent = `${result} | Puntaje - Tú: ${humanScore} Computadora: ${computerScore}`;
+
+    // 👇 Esto va adentro del click
+    computerChoiceDiv.innerHTML = `<img src="img/${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}.png" width="100" />`;
   });
 });
 
-const computerChoiceDiv = document.getElementById('computer-choice');
-computerChoiceDiv.innerHTML = `<img src="img/${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}.png" width="100" />`;
 document.getElementById('reset').addEventListener('click', () => {
   humanScore = 0;
   computerScore = 0;
   resultDiv.textContent = 'Puntaje reiniciado.';
+  computerChoiceDiv.innerHTML = ''; // Limpiar también la imagen
 });
-
